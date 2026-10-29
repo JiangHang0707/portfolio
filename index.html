@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- These meta tags tell the browser how to display the page -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- STEP 1: Change this to your own name and role -->
+  <title>JiangHang | IT Specialist</title>
+  <meta name="description" content="One sentence about who you are and what you do.">
+
+  <!-- Google Fonts: loads the typeface used on the page -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Connects this HTML file to your CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <!-- href="#about" jumps to the element with id="about" -->
+  <header class="site-header">
+    <a href="#top" class="logo">JH</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <!-- The first thing visitors see. Keep it short and clear. -->
+    <section class="hero">
+      <p class="hero-intro">Hi, I'm JiangHang.</p>
+      <h1>I study Software Engineering and build small tools that solve everyday problems.</h1>
+      <a href="#journey" class="button">See my projects</a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="about">
+      <h2>About me</h2>
+      <div class="about-grid">
+        <p>
+          I’m a Software Developer passionate about building reliable and scalable applications that solve real-world business challenges. 
+          Skilled in Flutter, Kotlin, Python, and Power Automate, I enjoy transforming complex problems into clean, efficient solutions.
+        </p>
+        <p>
+          My experience spans mobile and web development, process automation, and system integration — including projects that connect CRM, SAP, and internal tools to streamline workflows and improve data accuracy. I take pride in writing maintainable code, collaborating in agile teams, and continuously learning new technologies to deliver high-impact results.
+          Currently, I’m expanding my expertise in Web3 and blockchain technologies. I am exploring how decentralized solutions can create more transparent, secure, and efficient digital ecosystems. 
+          I’m driven by a commitment to quality, innovation, and using technology to make everyday processes smarter and more efficient.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ JOURNEY / TIMELINE ============ -->
+    <!-- Each <article> is one project. Copy one to add more. -->
+    <section id="journey" class="journey">
+      <h2>My journey</h2>
+
+      <ol class="timeline">
+        <li class="timeline-item">
+          <span class="year">Aug 2023 – Mar 2024</span>
+          <article>
+            <h3>Autonomous Delivery Robot</h3>
+            <p class="role">Final Year Project, Sunway University</p>
+            <p><strong>Problem:</strong> A delivery robot needed to map its surroundings and reach destinations on its own without hitting obstacles.</p>
+            <p><strong>What I did:</strong> Wrote the navigation software in Python and ROS on Ubuntu, implemented SLAM for mapping and pathfinding, and set up the hardware–software interface and Linux environment on the robot.</p>
+            <p><strong>Result:</strong> Through repeated testing, refined path tracking so the robot avoided obstacles and stopped more precisely at its destination.</p>
+            <ul class="tags">
+              <li>Python</li>
+              <li>ROS</li>
+              <li>SLAM</li>
+              <li>Ubuntu</li>
+            </ul>
+          </article>
+        </li>
+
+        <li class="timeline-item">
+          <span class="year">Dec 2023 – Mar 2024</span>
+          <article>
+            <h3>Software Developer Intern</h3>
+            <p class="role">July Technology Sdn Bhd</p>
+            <p><strong>Problem:</strong> The team needed core features for a car plate scanning iOS app, and website releases were slowed down by manual testing.</p>
+            <p><strong>What I did:</strong> Built core features of the app in Flutter and Dart, and wrote automated test scripts for the company website with Python and Selenium. Took part in Agile sprint planning and daily stand-ups.</p>
+            <p><strong>Result:</strong> Cut manual testing time by 20% and helped ship the app’s mobile interface.</p>
+            <ul class="tags">
+              <li>Flutter</li>
+              <li>Dart</li>
+              <li>Python</li>
+              <li>Selenium</li>
+              <li>Agile</li>
+            </ul>
+          </article>
+        </li>
+
+        <li class="timeline-item">
+          <span class="year">Aug – Dec 2024</span>
+          <article>
+            <h3>To-Do List Android App</h3>
+            <p class="role">Personal project</p>
+            <p><strong>Problem:</strong> I wanted to learn native Android development by building an app people use every day.</p>
+            <p><strong>What I did:</strong> Built the app in Kotlin with a Room database for saving tasks locally, added full create, edit and delete features, date and time scheduling, and a day/dark mode switch.</p>
+            <p><strong>Result:</strong> A working native Android app with tasks that stay saved between sessions.</p>
+            <ul class="tags">
+              <li>Kotlin</li>
+              <li>Android</li>
+              <li>Room Database</li>
+            </ul>
+          </article>
+        </li>
+
+        <li class="timeline-item">
+          <span class="year">Dec 2024</span>
+          <article>
+            <h3>Graduated: Bachelor of Software Engineering</h3>
+            <p class="role">Sunway University</p>
+          </article>
+        </li>
+
+        <li class="timeline-item">
+          <span class="year">Jun 2025 – Present</span>
+          <article>
+            <h3>RPA Developer</h3>
+            <p class="role">Glocomp (M) Sdn. Bhd.</p>
+            <p><strong>Problem:</strong> Internal teams were spending hours on repetitive, manual workflows across HR, finance and marketing.</p>
+            <p><strong>What I did:</strong> Built automations in Power Automate and Automation Anywhere, including a pre-onboarding email system that sends personalised messages to new hires. Gathered requirements with stakeholders and ran User Acceptance Testing before each launch.</p>
+            <p><strong>Result:</strong> Improved efficiency of internal workflows by 50%.</p>
+            <ul class="tags">
+              <li>Power Automate</li>
+              <li>Automation Anywhere</li>
+              <li>UAT</li>
+            </ul>
+          </article>
+        </li>
+
+        <li class="timeline-item">
+          <span class="year">Dec 2025</span>
+          <article>
+            <h3>Staff Claim Processing Automation</h3>
+            <p class="role">Glocomp (M) Sdn. Bhd.</p>
+            <p><strong>Problem:</strong> Staff claims were checked and entered by hand, which was slow and led to input errors.</p>
+            <p><strong>What I did:</strong> Automated the validation, categorisation and summarising of claims, with logic to read unstructured documents and integration with the CRM and SAP systems.</p>
+            <p><strong>Result:</strong> Reduced claim processing cycles by 70% and removed manual input errors.</p>
+            <ul class="tags">
+              <li>Automation</li>
+              <li>CRM</li>
+              <li>SAP</li>
+            </ul>
+          </article>
+        </li>
+
+        <li class="timeline-item">
+          <span class="year">Jan 2026</span>
+          <article>
+            <h3>Marketing Event Invitation Automation</h3>
+            <p class="role">Glocomp (M) Sdn. Bhd.</p>
+            <p><strong>Problem:</strong> The marketing team sent event invitations manually, which took time and risked mistakes in who received what.</p>
+            <p><strong>What I did:</strong> Built a Python tool that reads event details from Excel, builds recipient lists from the master contact database, always picks the latest marketing assets, and sends emails with embedded images, PDF attachments and calendar (.ics) invites. Added secure sign-in and rate limiting to stay within Google Workspace sending limits.</p>
+            <p><strong>Result:</strong> No more manual data entry, one-click RSVP for guests, and new marketing assets go out without any code changes.</p>
+            <ul class="tags">
+              <li>Python</li>
+              <li>Excel</li>
+              <li>Google Workspace</li>
+              <li>Email automation</li>
+            </ul>
+          </article>
+        </li>
+
+        <li class="timeline-item">
+          <span class="year">Jan 2026 – Present</span>
+          <article>
+            <h3>IT Specialist</h3>
+            <p class="role">Glocomp (M) Sdn. Bhd.</p>
+            <p><strong>Problem:</strong> Customers need server, storage and networking solutions that match their requirements and work together reliably.</p>
+            <p><strong>What I did:</strong> Configure and deploy Supermicro, Dell and NetApp solutions, prepare and validate Bills of Materials, turn customer requirements into technical configurations, and coordinate deployment with service, sales and procurement teams.</p>
+            <p><strong>Result:</strong> Solutions that meet compatibility standards and customers’ service-level expectations, supporting pre-sales delivery.</p>
+            <ul class="tags">
+              <li>Supermicro</li>
+              <li>Dell</li>
+              <li>NetApp</li>
+              <li>BOM</li>
+              <li>Pre-sales</li>
+            </ul>
+          </article>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="contact">
+      <h2>Let's talk</h2>
+      <p>I'm open to Working Opportunities.</p>
+      <div class="contact-links">
+        <a href="mailto:jianghang0707@gmail.com" class="button">Email me</a>
+        <a href="https://www.linkedin.com/in/wong-jiang-hang-211430210/" class="button button-outline">LinkedIn</a>
+        <a href="https://github.com/JiangHang0707" class="button button-outline">GitHub</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Designed and built by JiangHang, 2026.</p>
+  </footer>
+
+</body>
+</html>

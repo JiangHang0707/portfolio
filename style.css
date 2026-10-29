@@ -1,0 +1,289 @@
+/* =========================================================
+   1. CSS VARIABLES
+   Change colours and fonts here once, and the whole site updates.
+   ========================================================= */
+:root {
+  --bg: #eef2f1;          /* page background: cool mist */
+  --surface: #ffffff;     /* card background */
+  --ink: #16302b;         /* main text: deep pine */
+  --muted: #5b6f6a;       /* secondary text */
+  --accent: #1f6f5c;      /* buttons, year markers */
+  --line: #c9d6d2;        /* borders and timeline line */
+
+  --font: "Schibsted Grotesk", "Segoe UI", Arial, sans-serif;
+  --max-width: 960px;
+}
+
+/* Dark mode: the browser picks this if the visitor's device is in dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1d1a;
+    --surface: #17292a;
+    --ink: #e4eeeb;
+    --muted: #9fb3ad;
+    --accent: #5fc4a8;
+    --line: #2c4441;
+  }
+}
+
+/* =========================================================
+   2. BASE STYLES
+   ========================================================= */
+* {
+  box-sizing: border-box;   /* padding no longer makes boxes bigger */
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;  /* smooth scrolling when clicking nav links */
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 1.0625rem;
+}
+
+a {
+  color: inherit;
+}
+
+/* Visible outline for keyboard users (accessibility) */
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Centres every section and limits its width */
+section,
+.site-header,
+.site-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+/* =========================================================
+   3. NAVIGATION (uses Flexbox)
+   ========================================================= */
+.site-header {
+  display: flex;
+  justify-content: space-between;  /* logo left, links right */
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.logo {
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+nav a:hover {
+  color: var(--ink);
+}
+
+/* =========================================================
+   4. HERO
+   ========================================================= */
+.hero {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.hero-intro {
+  color: var(--muted);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.25rem, 6vw, 4rem); /* grows with screen size */
+  line-height: 1.1;
+  font-weight: 800;
+  max-width: 18ch;    /* ch = width of one character */
+  margin-bottom: 2.5rem;
+}
+
+/* =========================================================
+   5. BUTTONS
+   ========================================================= */
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 2px solid var(--accent);
+  transition: transform 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--accent);
+}
+
+/* =========================================================
+   6. ABOUT (uses CSS Grid)
+   ========================================================= */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* two equal columns */
+  gap: 2rem;
+  color: var(--muted);
+}
+
+/* =========================================================
+   7. JOURNEY TIMELINE
+   ========================================================= */
+.timeline {
+  list-style: none;
+  border-left: 2px solid var(--line);  /* the vertical line */
+  margin-left: 0.5rem;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* The dot on the line. ::before adds an element using CSS only */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -0.5rem;
+  top: 0.35rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.year {
+  display: block;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.timeline article {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+
+.timeline h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Company or context line under each title */
+.timeline .role {
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.timeline p {
+  margin-bottom: 0.4rem;
+  color: var(--muted);
+}
+
+.timeline strong {
+  color: var(--ink);
+}
+
+.tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;   /* tags move to a new line if there's no space */
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tags li {
+  font-size: 0.85rem;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+}
+
+/* =========================================================
+   8. CONTACT & FOOTER
+   ========================================================= */
+.contact p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+
+/* =========================================================
+   9. RESPONSIVE: styles for screens narrower than 640px (phones)
+   ========================================================= */
+@media (max-width: 640px) {
+  .about-grid {
+    grid-template-columns: 1fr;   /* stack into one column */
+  }
+
+  nav {
+    gap: 1rem;
+    font-size: 0.95rem;
+  }
+
+  section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
+/* Respect visitors who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button { transition: none; }
+}
